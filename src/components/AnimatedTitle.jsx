@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AnimatedTitle = ({ title, containerClass }) => {
+const AnimatedTitle = ({ title, containerClass,textColor }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const AnimatedTitle = ({ title, containerClass }) => {
       {title.split("<br />").map((line, index) => (
         <div
           key={index}
-          className="flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3 text-black"
+          className={`flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3 ${textColor} `}
         >
           {line.split(" ").map((word, idx) => (
             <span
