@@ -69,7 +69,6 @@ const Hero = () => {
         end: 'bottom center',
         scrub: 1,
         invalidateOnRefresh: true,
-        markers:true,
       }
     })
     setTimeout(()=> ScrollTrigger.refresh(),100)
